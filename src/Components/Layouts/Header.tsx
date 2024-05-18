@@ -366,7 +366,7 @@ const ResponsiveAppBar: React.FC<ResponsiveAppBarProps> = ({
                 >
                   {settings.map(setting =>
                     setting.type === 'link' ? (
-                      <Link href={setting.path} className=''>
+                      <Link href={setting.path} className='' key={setting.id}>
                         <MenuItem
                           key={setting.id}
                           onClick={handleCloseUserMenu}

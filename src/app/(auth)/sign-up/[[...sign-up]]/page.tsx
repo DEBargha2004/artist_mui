@@ -171,6 +171,7 @@ export default function SignUpPage () {
           {formConditions.map((condition, index) => (
             <Typography
               // variant='body2'
+              key={index}
               sx={{
                 color: theme.palette.grey[500],
                 fontSize: '13px',

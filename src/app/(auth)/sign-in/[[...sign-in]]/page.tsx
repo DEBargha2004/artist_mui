@@ -1,4 +1,4 @@
-// 'use client'
+'use client'
 
 import { CgmLogo } from '@/Components/Global'
 import { FormItemConatiner } from '@/Components/Global'
