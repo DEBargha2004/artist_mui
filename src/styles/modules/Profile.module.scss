@@ -1,0 +1,504 @@
+@import "../size.module";
+
+.profileBanner {
+    // background-color: cadetblue;
+    position: relative;
+    max-height: 30rem;
+
+    .profileAvatar {
+        position: relative;
+        margin: auto;
+        // text-align: center;
+        bottom: 8rem;
+        max-width: 200px;
+        max-height: 200px;
+    }
+}
+
+.profileInfo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    div {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+
+        h1 {
+            text-align: center;
+            font-size: xx-large;
+            font-weight: 600;
+            margin: 0px;
+
+        }
+
+        small {
+            color: #A4A4A4;
+            text-align: center;
+        }
+
+        p {
+            display: flex;
+            flex-direction: row;
+            gap: 0.3rem;
+            justify-content: center;
+            margin: 0rem;
+            font-size: small;
+            color: #A4A4A4;
+
+            // text-align: center;
+
+
+            svg {
+                font-size: medium;
+            }
+        }
+    }
+}
+
+
+.profileStatContainer {
+    // background-color: crimson;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    width: fit-content;
+    // margin: auto;
+    gap: 2rem;
+    margin: 1rem auto; // temporary
+
+    .profileFollow {
+        display: flex;
+        flex-flow: row wrap;
+        gap: 3rem;
+
+        hr {
+            border: 1px solid #515151;
+        }
+
+        div {
+            display: flex;
+            flex-direction: column;
+            width: 60px;
+            // gap: 0.5rem;
+
+            p {
+                margin: 0px auto;
+                font-size: large;
+                font-weight: 600;
+            }
+
+            span {
+                text-align: center;
+                font-size: small;
+                color: #A4A4A4;
+            }
+        }
+    }
+
+    .profileButtons {
+        display: flex;
+        flex-flow: row wrap;
+        // width: fit-content;
+        margin: auto;
+        // justify-content: space-between;
+        gap: 2rem;
+
+        button {
+            padding: 0.5rem 1.5rem;
+            background-color: transparent;
+            width: 120px;
+            border: 1px solid #0195F7;
+            border-radius: 4px;
+            color: #FFFFFF;
+            font-size: medium;
+            font-weight: 600;
+        }
+    }
+}
+
+// ----------------------------------Follower Section ------------------------------------ 
+
+.followerContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 3rem;
+    gap: 2rem;
+}
+
+.followerCard {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    padding: 1rem;
+    background-color: #1F222A;
+    gap: 2rem;
+    border-radius: 4px;
+}
+
+.followerAvatar {
+    img {
+        height: 100%;
+    }
+}
+
+.followerContent {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    justify-content: space-between;
+}
+
+.followerDetails {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    // padding: 0rem 0.5rem;
+
+    div:nth-child(1) {
+        display: flex;
+        flex-direction: column;
+    }
+
+    p {
+        margin: 0px;
+        padding: 0px;
+        font-size: large;
+        font-weight: 600;
+    }
+
+    span {
+        font-size: small;
+        color: #979797;
+    }
+}
+
+.followerArtworks {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 0.4rem;
+    // row-gap: 0.4rem;
+
+    img {
+        width: auto;
+        height: 72px;
+        display: flex;
+        flex: 1;
+        border-radius: 4px;
+    }
+}
+
+// ----------------------------------------------Jobs Section ---------------------------------------
+
+.jobsContainer {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    padding: 1rem;
+    gap: 0.5rem;
+
+    @include tablet {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 2rem;
+        gap: 1rem;
+    }
+
+    @include desktop {
+        grid-template-columns: repeat(3, 1fr);
+        padding: 3rem;
+        gap: 2rem;
+    }
+}
+
+.jobCard {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    padding: 1rem;
+    background-color: #1F222A;
+    gap: 0.5rem;
+    border-radius: 4px;
+
+    div:nth-child(1) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center
+    }
+
+    @include tablet {
+        gap: 1rem;
+    }
+
+    @include desktop {
+        gap: 2rem;
+    }
+}
+
+.jobDetails {
+    display: flex;
+    flex-direction: column;
+    // justify-content: space-between;
+    gap: 0.3rem;
+
+    h2 {
+        font-size: medium;
+        margin: 0px;
+        padding: 0px;
+
+        @include tablet {
+            font-size: large;
+        }
+
+        @include desktop {
+            font-size: x-large;
+        }
+    }
+
+    p {
+        margin: 0px;
+        padding: 0px;
+        font-size: small;
+        color: #979797;
+    }
+
+    span {
+        background-color: #FFB80038;
+        border: 1px solid #FFB800;
+        border-radius: 4px;
+        width: fit-content;
+        padding-inline: 0.5rem;
+        color: #FFB800;
+        font-size: small;
+    }
+}
+
+
+
+
+// ------------------------------------------------About Section --------------------------------
+
+.aboutContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem 0rem;
+    gap: 0.5rem;
+
+    @include tablet {
+        padding: 1rem 0rem;
+        gap: 1rem;
+    }
+
+    @include desktop {
+        padding: 2rem 0rem;
+        gap: 2rem;
+    }
+
+}
+
+.aboutWrapper {
+    background-color: #1F222A;
+    border-radius: 4px;
+    width: 90%;
+    margin-inline: auto;
+    padding: 1rem;
+    justify-content: center;
+
+    @include tablet {
+        width: 75%;
+        padding: 1rem 2rem;
+    }
+
+    @include desktop {
+        width: 50%;
+        padding: 1rem 3rem;
+    }
+
+    h2 {
+        font-size: medium;
+        text-align: center;
+        margin: 0px;
+
+        @include tablet {
+            font-size: large;
+        }
+
+        @include desktop {
+            font-size: x-large;
+        }
+    }
+
+    h3 {
+        font-size: small;
+        // text-align: center;
+        margin: 0.2rem 0;
+
+
+        @include tablet {
+            margin: 0.5rem 0;
+            font-size: medium;
+        }
+
+        @include desktop {
+            margin: 0.5rem 0;
+            font-size: large;
+        }
+    }
+
+    hr {
+        margin: 1rem auto;
+        // width: 90%;
+        border: 1px solid #515151;
+    }
+
+    p {
+        margin: 0px;
+        color: #A4A4A4;
+        font-size: small;
+        font-weight: 500;
+
+        @include tablet {
+            font-size: medium;
+        }
+
+        @include desktop {
+            font-size: large;
+        }
+    }
+}
+
+.aboutSkills {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: baseline;
+    gap: 1rem;
+
+    p {
+        display: flex;
+        flex-direction: row;
+        // flex: 1;
+        width: fit-content;
+        padding: 0.5rem;
+        border: 1px solid #676767;
+        background-color: #121212;
+        color: #FFFFFF;
+        border-radius: 4px;
+        margin: auto 0rem;
+        font-size: medium;
+        font-size: small;
+        font-weight: 500;
+
+        @include tablet {
+            font-size: medium;
+        }
+
+        @include desktop {
+            font-size: large;
+        }
+    }
+}
+
+.aboutResume {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+
+    img {
+        width: 36px;
+        height: 36px;
+    }
+
+    p {
+        margin: auto 0rem;
+
+        &:hover {
+            color: #FFFFFF;
+            cursor: pointer;
+        }
+    }
+}
+
+.aboutPortfolio {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: start;
+    // gap: 1rem;
+
+    @include tablet {
+        gap: 1rem;
+
+    }
+
+    @include desktop {
+        gap: 3rem;
+    }
+
+    p {
+        display: flex;
+        flex-direction: row;
+        gap: 0.5rem;
+        // flex: 1;
+        width: fit-content;
+        padding: 1rem;
+        // border: 1px solid #676767;
+        // background-color: #121212;
+        color: #FFFFFF;
+        border-radius: 4px;
+        margin: auto 0rem;
+        font-size: small;
+        font-weight: 500;
+
+        svg {
+            width: 16px;
+            height: 16px;
+
+            @include tablet {
+                width: 20px;
+                height: 20px;
+            }
+        }
+
+        @include tablet {
+            font-size: medium;
+        }
+
+        @include desktop {
+            font-size: medium;
+        }
+
+        &:hover {
+            cursor: pointer;
+            color: #A4A4A4;
+        }
+    }
+}
+
+.aboutRecruiters {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+
+    @include tablet {
+    grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+.recruiterCard {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+
+    p {
+        font-size: medium;
+        font-weight: 500;
+        color: #FFFFFF;
+        margin: 0px;
+
+        @include desktop {
+            font-size: x-large;
+        }
+    }
+
+    span {
+        font-size: small;
+        color: #676767
+    }
+}

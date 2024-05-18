@@ -1,0 +1,106 @@
+$primary: "#0195F7";
+$success: "#0F9D58";
+
+body::-webkit-scrollbar {
+  // background-color: #262626;
+
+  width: 0.4rem;
+  background-color: darkgray;
+
+  &-track {
+    background-color: #262626;
+    // border-radius: 25vw;
+  }
+
+  &-thumb {
+    background-color: #5fbfff;
+    border-radius: 25vw;
+
+    &:hover {
+      background-color: #5fbfff;
+      // background: linear-gradient(blue, blueviolet);
+      // background: linear-gradient(blue, red);
+    }
+  }
+}
+
+body::-webkit-scrollbar:horizontal {
+  // width: 0.5rem;
+  height: 0.4rem;
+  background-color: darkgray;
+
+  &-track {
+    background-color: #262626;
+    // border-radius: 25vw;
+  }
+
+  &-thumb {
+    background-color: #5fbfff;
+    border-radius: 25vw;
+
+    &:hover {
+      background-color: #5fbfff;
+      // background: linear-gradient(blue, blueviolet);
+      // background: linear-gradient(blue, red);
+    }
+  }
+}
+
+body::-moz-scrollbar {
+  // background-color: #262626;
+
+  scrollbar-width: 0.4rem;
+  background-color: darkgray;
+
+  &-track {
+    background-color: #262626;
+    // border-radius: 25vw;
+  }
+
+  &-thumb {
+    background-color: #5fbfff;
+    border-radius: 25vw;
+
+    &:hover {
+      background-color: #5fbfff;
+      // background: linear-gradient(blue, blueviolet);
+      // background: linear-gradient(blue, red);
+    }
+  }
+}
+
+body::-moz-scrollbar:horizontal {
+  // width: 0.5rem;
+  height: 0.4rem;
+  background-color: darkgray;
+
+  &-track {
+    background-color: #262626;
+    // border-radius: 25vw;
+  }
+
+  &-thumb {
+    background-color: #5fbfff;
+    border-radius: 25vw;
+
+    &:hover {
+      background-color: #5fbfff;
+      // background: linear-gradient(blue, blueviolet);
+      // background: linear-gradient(blue, red);
+    }
+  }
+}
+
+body {
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+}
+
+.primary {
+  background-color: $primary;
+}
+.success {
+  background-color: $success;
+}

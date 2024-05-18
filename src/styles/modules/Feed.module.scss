@@ -1,0 +1,317 @@
+@import "../size.module";
+
+.feedContainer {
+    // background-color: coral;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    column-gap: 1rem;
+
+    @include desktop {
+        grid-template-columns: repeat(3, 1fr);
+        padding: 2rem 1rem;
+    }
+}
+
+.feedLeftContainer {
+    // background-color: cadetblue;
+    display: none;
+
+    @include desktop {
+        display: block;
+    }
+}
+
+.feedRightContainer {
+    // background-color: cadetblue;
+
+    display: none;
+
+    @include desktop {
+        display: block;
+    }
+}
+
+.mainFeedContainer {
+    // background-color: crimson;
+    max-width: 506px;
+
+    @include tablet {
+    max-width: 606px;
+    }
+}
+
+
+// ------------------------------------------- Artist Preferences Start ------------------------------
+
+.preferencesTags {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    max-width: 50%;
+    // display: flex;
+    // flex-wrap: wrap;
+    // display: flex;
+    background-color: #36393a;
+    gap: 1rem;
+    // width: 100%;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    p {
+        display: inline;
+        white-space: nowrap;
+        // width: fit-content;
+        color: #0195F7;
+        // background-color: #35383F;
+        padding: 0.3rem 0.6rem;
+        border: 1px solid #0195F7;
+        border-radius: 14px;
+        margin: auto 0px;
+        // gap: 0.3rem;
+        font-size: small;
+    }
+
+}
+
+.swiperContainer {
+    padding: 1rem;
+    margin: 1.5rem 0rem;
+    border: 1px solid #35383F;
+    border-radius: 4px;
+
+    .swiperSlide {
+        // background-color: #0195F7 !important;
+        width: fit-content;
+        display: inline;
+        // white-space: nowrap;
+        // width: fit-content;
+        color: #0195F7;
+        // background-color: #35383F;
+        padding: 0.3rem 0.6rem;
+        border: 1px solid #0195F7;
+        border-radius: 14px;
+        margin: auto 0px;
+        // gap: 0.3rem;
+        font-size: small;
+    }
+}
+
+.swiperRecommendationsContainer {
+    padding: 0.5rem;
+    // background-color: #515151;
+    border: 1px solid #35383F;
+    border-radius: 4px;
+
+    @include tablet {
+    padding: 1.5rem;
+
+    }
+
+    .swiperSlide {
+        width: 80%;
+    }
+}
+
+.feedCardContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    padding: 0.5rem;
+
+    @include tablet {
+    padding: 1.5rem;
+
+    }
+}
+
+.singleCardWrapper {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #515151;
+    border-radius: 1rem;
+}
+
+.singleCardHeader {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    padding: 0.5rem 1rem;
+
+    p {
+        margin: 0px;
+        font-size: large;
+        font-weight: 600;
+    }
+
+    span {
+        font-size: small;
+        font-weight: 500;
+        color: #A4A4A4;
+    }
+
+    div:nth-child(2) {
+        display: flex;
+        flex-direction: column;
+        // gap: 0px;
+    }
+}
+
+.singleCardImage {
+    img {
+        width: 70%;
+
+        @include tablet {
+        width: 100%;
+
+        }
+    }
+}
+
+.singleCardDetails {
+    display: flex;
+    flex-direction: column;
+    // gap: 1rem;
+    padding: 0.5rem 1rem;
+
+    div:first-child {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        div:first-child {
+            // background-color: burlywood;
+            display: flex;
+            flex-direction: row;
+            gap: 1rem;
+
+            p {
+                margin: 0px;
+                display: flex;
+                flex-direction: row;
+                gap: 0.3rem;
+
+                svg {
+                    font-size: x-large;
+                }
+
+                span {
+                    font-size: medium;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+
+    div:last-child {
+        p {
+            margin: 0px;
+            font-size: large;
+            font-weight: 600;
+        }
+
+        span {
+            font-size: small;
+            font-weight: 500;
+            color: #A4A4A4;
+        }
+    }
+}
+
+.feedJobContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    background-color: #35383F;
+    border-radius: 4px;
+    padding: 0.3rem;
+    // width: 80%;
+    margin: 0px;
+
+    @include tablet {
+    padding: 0.5rem;
+
+    }
+
+    hr {
+        margin: 0rem;
+        border: 1px solid #515151;
+    }
+
+    .feedJobHeader {
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        gap: 0.5rem;
+
+        img {
+            border-radius: 4px;
+        }
+
+        div:nth-child(2) {
+            display: flex;
+            flex-direction: column;
+        }
+
+        div:last-child {
+            display: flex;
+            flex-direction: row;
+            flex: 1;
+            justify-content: end;
+        }
+
+        h3 {
+            margin: 0px;
+            font-size: medium;
+
+            @include desktop {
+                font-size: large;
+            }
+        }
+    }
+
+    .feedJobDetails {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        div {
+            p {
+                margin: 0px;
+                font-size: small;
+                color: #A4A4A4;
+            }
+
+            span {
+                font-size: small;
+                color: #0195F7;
+            }
+
+            div {
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: baseline;
+                // align-items: start;
+                // justify-items: start;
+                gap: 0.5rem;
+
+                p {
+                    display: flex;
+                    flex-direction: row;
+                    background-color: #676767;
+                    padding: 0.2rem 0.5rem;
+                    border-radius: 4px;
+                    margin: auto 0px;
+                    gap: 0.3rem;
+                    font-size: small;
+                }
+            }
+        }
+    }
+}
+
+// ------------------------------------------- Artist Preferences End ------------------------------

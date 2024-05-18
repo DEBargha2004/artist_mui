@@ -1,0 +1,112 @@
+@import "../size.module";
+
+.jobWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    // background-color: crimson;
+    width: 90%;
+    margin: 1rem auto;
+
+    @include desktop {
+        flex-direction: row;
+        margin: 3rem auto;
+
+        // width: 75%;
+        gap: 3rem;
+    }
+}
+
+.detailsContainer {
+    display: flex;
+    flex-direction: column;
+    // background-color: teal;
+    gap: 1rem;
+    // padding: 0.5rem;
+
+    @include desktop {
+        flex-direction: column;
+        flex: 1;
+        gap: 2rem;
+    }
+
+    hr {
+        // max-width: 30%;
+        // height: 0.01rem;
+        margin: 0rem;
+        border: 1px solid #515151;
+    }
+}
+
+.sideContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    // background-color: cyan;
+
+    @include desktop {
+        flex: 0 0 25%;
+        gap: 3rem;
+    }
+}
+
+.jobDescription {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    h2 {
+        font-size: large;
+        margin: 0px;
+    }
+
+    p {
+        font-size: medium;
+        font-weight: 500;
+        margin: 0px;
+    }
+}
+
+.jobSkills {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 1rem;
+    width: 100%;
+    
+    p {
+        display: flex;
+        flex-direction: row;
+        width: fit-content;
+        color: #0195F7;
+        // background-color: #35383F;
+        padding: 0.3rem 0.6rem;
+        border: 1px solid #0195F7;
+        border-radius: 14px;
+        margin: auto 0px;
+        // gap: 0.3rem;
+        font-size: small;
+    }
+}
+
+.summaryTags {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: start;
+    gap: 3rem;
+
+    @include desktop {
+    gap: 6rem;
+
+    }
+
+    p {
+        // font-size: large;
+        font-weight: 600;
+        margin: 0px;
+    }
+
+    span {
+        font-size: small;
+        color: #0195F7;
+    }
+}

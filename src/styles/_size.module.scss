@@ -1,0 +1,40 @@
+@use "sass:math";
+
+// $breakpoint-xs: 600px;
+// $breakpoint-md: 1023px;
+// $breakpoint-lg: 1024px; 
+
+// $breakpoints: (
+//     mobile: $breakpoint-xs,
+//     tablet: $breakpoint-md,
+//     desktop: $breakpoint-lg
+// )
+
+// @mixin mobile {
+//  @media screen amd {
+    
+//  }
+// }
+
+// _breakpoints.scss
+
+// Define mixin for small devices (mobile phones)
+@mixin mobile {
+  @media (max-width: 600px) {
+    @content;
+  }
+}
+
+// Define mixin for medium devices (tablets)
+@mixin tablet {
+  @media (min-width: 600px) {
+    @content;
+  }
+}
+
+// Define mixin for large devices (desktops)
+@mixin desktop {
+  @media (min-width: 1025px) {
+    @content;
+  }
+}

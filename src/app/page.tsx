@@ -1,95 +1,105 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+'use client'
 
-export default function Home() {
+import theme from '@/theme/theme'
+import landingPage from '../../public/assets/images/landing-page.png'
+// import Image from "next/image";
+// import styles from "./page.module.css";
+
+import { Box, Typography } from '@mui/material'
+import Link from 'next/link'
+import Image from 'next/image'
+import {
+  StyledButton,
+  StyledTextField,
+  StyledSeparator
+} from '@/Components/Styled'
+
+export default function Home () {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+    <Box
+      sx={{
+        display: 'flex',
+        justifyContent: 'center',
+        flexDirection: 'row-reverse',
+        alignItems: 'center',
+        gap: '40px'
+      }}
+    >
+      <Box sx={{ width: '50%' }}>
+        <Box
+          sx={{
+            width: '85%',
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'end',
+            alignItems: 'center',
+            gap: '30px',
+            marginTop: '40px'
+          }}
+        >
+          <Typography
+            variant='h4'
+            sx={{ fontWeight: 500, textAlign: 'center' }}
           >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
+            Welcome to the Professional Artist’s Community
+          </Typography>
+          <Box
+            sx={{
+              width: '70%',
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'center',
+              alignItems: 'stretch',
+              gap: '24px',
+              padding: '24px',
+              border: '1px solid #1C1C1C'
+            }}
+          >
+            <StyledTextField
+              variant='outlined'
+              sx={{ width: '100%' }}
+              placeholder='Email address or Phone Number'
+              type='email'
             />
-          </a>
-        </div>
-      </div>
-
-      <div className={styles.center}>
+            <StyledTextField
+              variant='outlined'
+              sx={{ width: '100%' }}
+              placeholder='Password'
+            />
+            <StyledButton variant='contained'>Sign In</StyledButton>
+            <Box
+              sx={{
+                width: '100%',
+                textAlign: 'center',
+                color: theme.palette.primary.dark,
+                fontSize: '14px'
+              }}
+            >
+              <Link href={'/forgot-password'}>Forgotten Password</Link>
+            </Box>
+            <StyledSeparator sx={{ width: '100%', height: '1px' }} />
+            <StyledButton
+              sx={{
+                width: '100%',
+                backgroundColor: theme.palette.success.main,
+                ':hover': {
+                  backgroundColor: theme.palette.success.main
+                }
+              }}
+            >
+              Create New Account
+            </StyledButton>
+          </Box>
+        </Box>
+      </Box>
+      <Box sx={{ width: '50%' }}>
         <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
+          src={landingPage}
+          alt='landing-page-image'
+          height={540}
+          style={{ width: '100%', objectFit: 'contain' }}
         />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  );
+      </Box>
+    </Box>
+  )
 }
